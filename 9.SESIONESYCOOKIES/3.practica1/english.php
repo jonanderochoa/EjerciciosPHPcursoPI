@@ -6,6 +6,7 @@
 <body>
 	<h1>Welcome to my english page</h1>
 	<br>
-	<a href="http://localhost/pildorasInformaticasPHP/SESIONESYCOOKIES/practica1/crearCookie.php?idioma=es">Spanish version</a>
+	<a href="crearCookie.php?idioma=es">Spanish version</a>
+	<a href="destruye_cookie.php?idioma=es">Cerrar sesión</a>
 </body>
 </html>
