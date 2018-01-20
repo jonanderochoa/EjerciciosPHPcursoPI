@@ -10,14 +10,12 @@
 	<table>
 		<tr><td>NOMBRE DEL ARTíCULO</td></tr>
 <?php 
-	
 	//Con este foreach recorremos la matriz que nos pasa el controlador
 	foreach($matrizProductos as $registro){
 
 		echo "<tr><td>" . $registro["NOMBRE"] . "</td></tr>";
 	}
  ?>
- 	
 	</table>
 </body>
 </html>

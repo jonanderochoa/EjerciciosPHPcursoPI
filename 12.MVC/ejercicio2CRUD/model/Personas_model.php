@@ -1,5 +1,4 @@
 <?php 
-
 	class Personas_model{
 
 		//Guarda la conexion
@@ -35,6 +34,4 @@
 			return $this->personas;
 		}
 	}
-	
-
  ?>

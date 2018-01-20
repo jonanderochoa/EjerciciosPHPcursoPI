@@ -8,7 +8,7 @@
 		//Almacen de productos
 		private $productos;
 
-		//Constructor
+		//Constructor que inicializa la conexion con la BBDD
 		public function __construct(){
 			
 			require_once("model/conectar.php");
@@ -37,6 +37,4 @@
 			return $this->productos;
 		}
 	}
-	
-
  ?>

@@ -6,8 +6,7 @@
 </head>
 <body>
 	
-<?php 
- 
+<?php
  	//Si han pulsado el boton de insertar
   if(isset($_POST['cr'])){
 
@@ -16,8 +15,7 @@
     $ape = $_POST['Ape'];
     $dir = $_POST['Dir'];
 
-    $sql = "INSERT INTO DATOS_USUARIOS (nombre, apellido, direccion)
-    VALUES (:nom, :ape, :dir)";
+    $sql = "INSERT INTO DATOS_USUARIOS (nombre, apellido, direccion) VALUES (:nom, :ape, :dir)";
 
     $resultado = $base->prepare($sql);
 
@@ -53,7 +51,8 @@
         <td><?php echo $persona["direccion"]; ?></td>
    
         <td class="bot"><a href="delete.php?Id=<?php echo $persona["id"]?>"><input type='button' name='del' id='del' value='Borrar'></a></td>
-        <td class='bot'><a href="editar.php?Id=<?php echo $persona["id"] ?> & Nom=<?php echo $persona["nombre"] ?> & Ape=<?php echo $persona["apellido"] ?> & Dir=<?php echo $persona["direccion"] ?>"><input type='button' name='up' id='up' value='Actualizar'></a></td>
+        <td class='bot'><a href="editar.php?Id=<?php echo $persona["id"] ?> & Nom=<?php echo $persona["nombre"] ?> & Ape=<?php echo 
+        $persona["apellido"] ?> & Dir=<?php echo $persona["direccion"] ?>"><input type='button' name='up' id='up' value='Actualizar'></a></td>
       </tr> 
 
       <?php endforeach; ?>      
@@ -69,20 +68,5 @@
     </td></tr> 
     </table>
   </form>
-  
-
-	<p>&nbsp;</p>
 </body>
 </html>
-
-
-
-
-
-  
-  
-
-  
-
-  
-

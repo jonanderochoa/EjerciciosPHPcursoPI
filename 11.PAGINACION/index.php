@@ -22,17 +22,17 @@
 		$pagina = 1;
 	}
 	try{
-
+		//Conexion con la BBDD
 		$base = new PDO("mysql:host=localhost; dbname=prueba", "root", "");
 
 		$base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$base->exec("SET CHARACTER SET utf8");
 
-		//cantidad de valores que ver de cada pagina
+		//cantidad de valores que queremos ver en cada página
 		$cantidad  = 3;
 
-		//SQL con la que averiguamos el número de registros
+		//SQL que devuelve todos los productos
 		$sql = "SELECT * FROM PRODUCTOS WHERE SECCION='DEPORTE' ";
 
 		$resultado = $base->prepare($sql);
@@ -53,7 +53,8 @@
 		//Cerramos el cursor porque vamos a hacer otra sql
 		$resultado->closeCursor();
 
-		//Calculamos el inicion de la paginacion en funcion de la pagina
+		//Calculamos los productos que mostrara la tabla en funcion del numero de la página
+		//Con esta sentenca calculamos el indice del producto que se mostrara 
 		$inicio = ($pagina-1) * $cantidad;
 
 		//SQL con LIMIT para limitar el inicio y la cantidad
